@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/views/widgets/active_inactive_item.dart';
@@ -12,26 +13,39 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const Column(
-        children: [
-          UserInfoListTile(
-            image: Assets.imagesAvatar3,
-            title: 'Lekan Okeowo',
-            subTitle: 'demo@gmail.com',
+      child: const CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              image: Assets.imagesAvatar3,
+              title: 'Lekan Okeowo',
+              subTitle: 'demo@gmail.com',
+            ),
           ),
-          SizedBox(
-            height: 8,
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
           ),
           DrawerItemListView(),
-          Expanded(child: SizedBox()),
-          InActiveDrawerItem(
-              drawerItem: DrawerItemModel(
-                  title: 'Setting system', image: Assets.imagesSettings)),
-          InActiveDrawerItem(
-              drawerItem: DrawerItemModel(
-                  title: 'Logout account', image: Assets.imagesLogout)),
-          SizedBox(
-            height: 48,
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(
+                  child: SizedBox(),
+                ),
+                InActiveDrawerItem(
+                    drawerItem: DrawerItemModel(
+                        title: 'Setting system', image: Assets.imagesSettings)),
+                InActiveDrawerItem(
+                    drawerItem: DrawerItemModel(
+                        title: 'Logout account', image: Assets.imagesLogout)),
+                SizedBox(
+                  height: 48,
+                )
+              ],
+            ),
           )
         ],
       ),
