@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
+import 'package:responsive_dash_board/views/widgets/active_inactive_item.dart';
 import 'package:responsive_dash_board/views/widgets/drawer_item_list_view.dart';
 import 'package:responsive_dash_board/views/widgets/user_info_list_tile.dart';
 
@@ -21,6 +23,16 @@ class CustomDrawer extends StatelessWidget {
             height: 8,
           ),
           DrawerItemListView(),
+          Expanded(child: SizedBox()),
+          InActiveDrawerItem(
+              drawerItem: DrawerItemModel(
+                  title: 'Setting system', image: Assets.imagesSettings)),
+          InActiveDrawerItem(
+              drawerItem: DrawerItemModel(
+                  title: 'Logout account', image: Assets.imagesLogout)),
+          SizedBox(
+            height: 48,
+          )
         ],
       ),
     );
