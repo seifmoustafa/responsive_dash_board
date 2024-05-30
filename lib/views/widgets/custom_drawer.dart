@@ -33,7 +33,7 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  child: SizedBox(),
+                  child: SizedBox(height:20),
                 ),
                 InActiveDrawerItem(
                     drawerItem: DrawerItemModel(
