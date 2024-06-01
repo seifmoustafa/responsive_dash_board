@@ -10,7 +10,10 @@ class QuikInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
         child: Column(
-      children: [QuikInvoiceHeader(), LatestTransaction()],
+      children: [
+        QuikInvoiceHeader(),
+        LatestTransaction(),
+      ],
     ));
   }
 }
