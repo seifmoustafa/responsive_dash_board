@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:responsive_dash_board/views/widgets/my_card.dart';
 
 class MyCardsPageView extends StatelessWidget {
@@ -6,12 +7,11 @@ class MyCardsPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: 3,
-      itemBuilder: (context, index) {
-        return const MyCard();
-      },
+    return ExpandablePageView(
+      children: List.generate(
+        3,
+        (index) => const MyCard(),
+      ),
     );
   }
 }
