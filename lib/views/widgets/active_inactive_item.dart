@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dash_board/models/drawer_item_model.dart';
+import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/models/drawer_item_model.dart';
 
 class InActiveDrawerItem extends StatelessWidget {
   const InActiveDrawerItem({
@@ -17,7 +17,7 @@ class InActiveDrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItem.image),
       title: Text(
         drawerItem.title,
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleMedium16(context),
       ),
     );
   }
@@ -37,7 +37,7 @@ class ActiveDrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItem.image),
       title: Text(
         drawerItem.title,
-        style: AppStyles.styleBold16,
+        style: AppStyles.styleBold16(context),
       ),
       trailing: Container(
         width: 3.27,

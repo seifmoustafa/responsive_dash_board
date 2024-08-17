@@ -48,7 +48,7 @@ class _DetailedIncomChartState extends State<DetailedIncomChart> {
           /// The title style for the first section.
           titleStyle: activeIndex == 0
               ? null
-              : AppStyles.styleMedium16.copyWith(color: Colors.white),
+              : AppStyles.styleMedium16(context).copyWith(color: Colors.white),
 
           /// The radius of the first section.
           radius: activeIndex == 0 ? 60 : 50,
@@ -69,7 +69,7 @@ class _DetailedIncomChartState extends State<DetailedIncomChart> {
           /// The title style for the second section.
           titleStyle: activeIndex == 1
               ? null
-              : AppStyles.styleMedium16.copyWith(color: Colors.white),
+              : AppStyles.styleMedium16(context).copyWith(color: Colors.white),
 
           /// The radius of the second section.
           radius: activeIndex == 1 ? 60 : 50,
@@ -90,7 +90,7 @@ class _DetailedIncomChartState extends State<DetailedIncomChart> {
           /// The title style for the third section.
           titleStyle: activeIndex == 2
               ? null
-              : AppStyles.styleMedium16.copyWith(color: Colors.white),
+              : AppStyles.styleMedium16(context).copyWith(color: Colors.white),
 
           /// The radius of the third section.
           radius: activeIndex == 2 ? 60 : 50,
@@ -111,7 +111,7 @@ class _DetailedIncomChartState extends State<DetailedIncomChart> {
           /// The title style for the fourth section.
           titleStyle: activeIndex == 3
               ? null
-              : AppStyles.styleMedium16.copyWith(color: Colors.white),
+              : AppStyles.styleMedium16(context).copyWith(color: Colors.white),
 
           /// The radius of the fourth section.
           radius: activeIndex == 3 ? 60 : 50,
